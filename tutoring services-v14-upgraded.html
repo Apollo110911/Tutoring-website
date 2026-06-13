@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empowering Education | Online Math Tutoring for Grades 1-6</title>
+  <meta name="description" content="Empowering Education offers friendly online math tutoring and homework help for Grades 1-6 students, with clear explanations and confidence-building support." />
+  <meta name="keywords" content="online tutoring, elementary math tutor, Grades 1-6 tutoring, homework help, Canada tutoring" />
+  <meta name="author" content="Empowering Education" />
+  <meta property="og:title" content="Empowering Education | Online Math Tutoring for Grades 1-6" />
+  <meta property="og:description" content="Clear, encouraging online tutoring that helps elementary students build math confidence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Empowering Education",
+    "logo": "logo.png",
+    "description": "Online math tutoring and homework help for Grades 1-6 students.",
+    "email": "empowering.education1@gmail.com",
+    "telephone": "780-850-8400",
+    "areaServed": "Canada",
+    "availableLanguage": "English"
+  }
+  </script>
+
+  <style>
+    :root {
+      --blue: #1457a6;
+      --blue-dark: #0b2d5c;
+      --orange: #f59e0b;
+      --orange-soft: #fff4dc;
+      --green: #0f766e;
+      --ink: #111827;
+      --muted: #526070;
+      --line: #dbe3ef;
+      --paper: #ffffff;
+      --wash: #f5f8fc;
+      --shadow: 0 18px 45px rgba(14, 35, 68, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    img,
+    svg {
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -80px;
+      z-index: 30;
+      background: var(--paper);
+      border: 2px solid var(--blue);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--blue-dark);
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      border-radius: var(--radius);
+      color: #263547;
+      font-size: 0.94rem;
+      font-weight: 700;
+      padding: 10px 12px;
+      text-decoration: none;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: #eaf2ff;
+      color: var(--blue);
+      outline: none;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      border: 0;
+      border-radius: var(--radius);
+      background: var(--blue);
+      color: white;
+      cursor: pointer;
+      font-weight: 800;
+      line-height: 1.1;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #0f4b92;
+      box-shadow: 0 12px 24px rgba(20, 87, 166, 0.22);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--blue-dark);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+    }
+
+    .button.secondary:hover,
+    .button.secondary:focus-visible {
+      background: #edf5ff;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+    }
+
+    .button svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      min-height: clamp(510px, 78svh, 700px);
+      color: white;
+      isolation: isolate;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("background.jpg") center / cover no-repeat;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(5, 30, 66, 0.88) 0%, rgba(6, 42, 86, 0.74) 43%, rgba(7, 45, 86, 0.2) 100%),
+        linear-gradient(180deg, rgba(5, 22, 45, 0.28), rgba(5, 22, 45, 0.46));
+    }
+
+    .hero-inner {
+      width: min(1160px, 100%);
+      margin: 0 auto;
+      padding: 64px 20px 54px;
+    }
+
+    .hero-lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-lockup img {
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: var(--radius);
+      padding: 7px;
+    }
+
+    .eyebrow {
+      color: #ffdc91;
+      font-size: 0.84rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin: 0 0 5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.45rem, 6vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: #e9f3ff;
+      font-size: clamp(1.06rem, 2vw, 1.28rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+      max-width: 800px;
+    }
+
+    .trust-pill {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.13);
+      color: #f5fbff;
+      font-size: 0.92rem;
+      font-weight: 800;
+      padding: 9px 13px;
+    }
+
+    .quick-strip {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .quick-strip-inner {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+    }
+
+    .quick-item {
+      min-height: 112px;
+      background: white;
+      padding: 22px;
+      display: grid;
+      gap: 4px;
+      align-content: center;
+    }
+
+    .quick-item strong {
+      color: var(--blue-dark);
+      font-size: 1.18rem;
+    }
+
+    .quick-item span {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    main section {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      margin: 0 0 8px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 16px 0 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(22px, 4vw, 36px);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 16px;
+      list-style: none;
+      margin: 28px 0 0;
+      padding: 0;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .check-icon,
+    .card-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius);
+      background: #e8f6f4;
+      color: var(--green);
+    }
+
+    .check-icon svg,
+    .card-icon svg {
+      width: 19px;
+      height: 19px;
+      stroke: currentColor;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .check-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 1.02rem;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .check-list span {
+      color: var(--muted);
+    }
+
+    .availability {
+      background: var(--blue-dark);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .availability::before {
+      content: "";
+      position: absolute;
+      inset: auto -20px -70px auto;
+      width: 260px;
+      height: 260px;
+      background: var(--orange);
+      opacity: 0.16;
+      transform: rotate(12deg);
+    }
+
+    .availability h3 {
+      font-size: clamp(1.55rem, 3vw, 2.25rem);
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
+
+    .availability p {
+      color: #d7e7fb;
+      margin: 0;
+    }
+
+    .time-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 28px;
+      position: relative;
+    }
+
+    .time-grid span {
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.08);
+      min-height: 58px;
+      padding: 10px;
+      display: grid;
+      place-items: center;
+      color: #fff9ec;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      min-height: 250px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: grid;
+      align-content: start;
+      gap: 14px;
+      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(20, 87, 166, 0.38);
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .service-card:nth-child(2) .card-icon {
+      background: var(--orange-soft);
+      color: #b45309;
+    }
+
+    .service-card:nth-child(3) .card-icon {
+      background: #eaf2ff;
+      color: var(--blue);
+    }
+
+    .service-card h3 {
+      font-size: 1.22rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .pricing-band {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pricing-inner {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 70px 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .price-box {
+      border: 2px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 28px;
+      background: #fffaf0;
+    }
+
+    .price {
+      color: var(--blue-dark);
+      font-size: clamp(3.1rem, 8vw, 5.4rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .price small {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .price-box p {
+      color: #59421a;
+      margin: 16px 0 0;
+    }
+
+    .policy-contact {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: var(--blue-dark);
+      color: white;
+      border-radius: var(--radius);
+      padding: clamp(24px, 4vw, 34px);
+    }
+
+    .contact-card h2 {
+      color: white;
+    }
+
+    .contact-card .lead {
+      color: #d9e7f7;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+      margin: 24px 0 0;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius);
+      color: white;
+      font-weight: 800;
+      padding: 12px;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--orange);
+      stroke-width: 2.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .footer {
+      background: #07182e;
+      color: #dbe7f4;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .split,
+      .pricing-inner,
+      .policy-contact {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .quick-strip-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-strip-inner {
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        align-items: center;
+        flex-direction: row;
+        padding: 10px 14px;
+      }
+
+      .nav-links {
+        width: auto;
+        display: flex;
+      }
+
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .nav-links .button {
+        width: auto;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 38px 18px 34px;
+      }
+
+      .hero-lockup {
+        align-items: flex-start;
+      }
+
+      .hero-lockup img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .hero-actions,
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .time-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      main section,
+      .quick-strip-inner,
+      .pricing-inner {
+        width: min(100% - 28px, 1160px);
+      }
+
+      main section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Empowering Education home">
+        <img src="logo.png" alt="" />
+        <span>Empowering Education</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+        <a class="button" href="booking-v14-upgraded.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" /></svg>
+          Book
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <div class="hero-lockup">
+        <img src="logo.png" alt="Empowering Education logo" />
+        <div>
+          <p class="eyebrow">Online math tutoring for Grades 1-6</p>
+          <h1>Empowering Education</h1>
+        </div>
+      </div>
+      <p class="hero-copy">
+        Friendly tutoring that helps elementary students understand the why, practice with confidence, and feel less stuck during math and homework time.
+      </p>
+      <div class="hero-actions">
+        <a class="button" href="booking-v14-upgraded.html">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" /></svg>
+          Book a Session
+        </a>
+        <a class="button secondary" href="#pricing">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3" /></svg>
+          See Pricing
+        </a>
+      </div>
+      <div class="trust-row" aria-label="Tutoring highlights">
+        <span class="trust-pill">30 or 60 minute sessions</span>
+        <span class="trust-pill">$18 per hour</span>
+        <span class="trust-pill">Weekday and Sunday availability</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="quick-strip" aria-label="Quick details">
+    <div class="quick-strip-inner">
+      <div class="quick-item">
+        <strong>Grades 1-6</strong>
+        <span>Elementary math and homework help</span>
+      </div>
+      <div class="quick-item">
+        <strong>Online sessions</strong>
+        <span>Convenient support from home</span>
+      </div>
+      <div class="quick-item">
+        <strong>Confidence first</strong>
+        <span>Clear steps, practice, and encouragement</span>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <section id="about">
+      <div class="split">
+        <div>
+          <div class="section-heading">
+            <p class="section-label">Teaching philosophy</p>
+            <h2>Students learn best when the steps finally make sense.</h2>
+            <p class="lead">
+              We do more than give answers. Each session is built around patient explanations, guided practice, and problem-solving strategies students can use on their own.
+            </p>
+          </div>
+          <ul class="check-list" aria-label="Teaching benefits">
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg></span>
+              <span><strong>Clear explanations</strong>Topics are broken into small, manageable steps.</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg></span>
+              <span><strong>Guided independence</strong>Students learn how to approach problems, not just copy solutions.</span>
+            </li>
+            <li>
+              <span class="check-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg></span>
+              <span><strong>Encouraging practice</strong>Sessions are supportive, upbeat, and paced for younger learners.</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="panel availability" aria-label="Weekly availability">
+          <h3>Available 7-8 PM MST</h3>
+          <p>Sessions are offered on Monday, Tuesday, Thursday, Friday, and Sunday.</p>
+          <div class="time-grid" aria-label="Available days">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sun</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-heading center">
+        <p class="section-label">Support options</p>
+        <h2>Focused help for the moments students feel stuck.</h2>
+        <p class="lead">Choose support for current homework, long-term math confidence, or better study habits.</p>
+      </div>
+
+      <div class="cards">
+        <article class="service-card">
+          <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M7 15l4-4 3 3 5-7" /></svg></span>
+          <h3>Math Tutoring</h3>
+          <p>Build stronger foundations in arithmetic, word problems, patterns, measurement, fractions, and problem-solving.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h10a2 2 0 0 1 2 2v14H8a4 4 0 0 1 0-8h12M8 4a4 4 0 0 0 0 8" /></svg></span>
+          <h3>Homework Help</h3>
+          <p>Get patient help with assignments while learning the steps needed to solve similar questions later.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" /></svg></span>
+          <h3>Confidence Building</h3>
+          <p>Practice with a relatable tutor who keeps the tone calm, encouraging, and focused on steady improvement.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section id="pricing" class="pricing-band">
+    <div class="pricing-inner">
+      <div class="section-heading">
+        <p class="section-label">Pricing</p>
+        <h2>Simple rates for flexible tutoring.</h2>
+        <p class="lead">Families can choose 30-minute or 60-minute sessions. Each session includes personalized guidance and feedback to help students keep moving forward.</p>
+      </div>
+
+      <div class="price-box" aria-label="Tutoring price">
+        <p class="price">$18 <small>per hour</small></p>
+        <p>Shorter sessions are available when a focused 30-minute check-in is the better fit.</p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="contact" class="policy-contact">
+      <article class="panel">
+        <p class="section-label">Cancellation policy</p>
+        <h2>Plans change. Just give 48 hours notice.</h2>
+        <p class="lead">
+          If you need to cancel a session, a full reimbursement is available as long as the cancellation is made at least 48 hours before the scheduled session time.
+        </p>
+      </article>
+
+      <article class="contact-card">
+        <p class="section-label">Contact</p>
+        <h2>Ready to book or ask a question?</h2>
+        <p class="lead">Reach out anytime. We respond within 24 hours to confirm availability and next steps.</p>
+        <div class="contact-links">
+          <a href="mailto:empowering.education1@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z" /><path d="m4 7 8 6 8-6" /></svg>
+            empowering.education1@gmail.com
+          </a>
+          <a href="tel:17808508400">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.11 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.33 1.8.63 2.65a2 2 0 0 1-.45 2.11L8 9.77a16 16 0 0 0 6.23 6.23l1.29-1.29a2 2 0 0 1 2.11-.45c.85.3 1.74.51 2.65.63A2 2 0 0 1 22 16.92Z" /></svg>
+            780-850-8400
+          </a>
+          <a class="button" href="booking-v14-upgraded.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" /></svg>
+            Book a Session
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Empowering Education. Online tutoring for Grades 1-6.</p>
+  </footer>
+</body>
+</html>
